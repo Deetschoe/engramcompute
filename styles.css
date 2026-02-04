@@ -392,44 +392,31 @@ body::after {
     display: block;
 }
 
-/* Advisors */
-.advisors {
+/* Investors */
+.investors {
     padding: var(--section-padding) 0;
 }
 
-.advisors-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 16px;
-}
-
-.advisor-card {
+.investors-grid {
     display: flex;
-    gap: 14px;
-    padding: 16px;
-    background: var(--color-bg-card);
-    border: 1px solid var(--color-border);
-    border-radius: 10px;
-    transition: border-color var(--transition), box-shadow var(--transition);
-    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px 24px;
 }
 
-.advisor-card:hover {
-    border-color: transparent;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+.investor {
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--color-text);
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
 }
 
-.advisor-info h3 {
-    font-size: 14px;
-    font-weight: 600;
-    margin-bottom: 2px;
-}
-
-.advisor-title {
-    font-size: 10px;
+.investor-note {
+    font-size: 11px;
     font-family: var(--font-mono);
-    color: var(--color-accent);
-    display: block;
+    color: var(--color-text-muted);
+    font-weight: 400;
 }
 
 /* Contact - Simplified */
@@ -505,8 +492,8 @@ footer {
         opacity: 0.7;
     }
 
-    .advisors-grid {
-        grid-template-columns: 1fr;
+    .investors-grid {
+        gap: 8px 20px;
     }
 }
 
@@ -579,10 +566,8 @@ footer {
         align-items: center;
     }
 
-    .advisor-card {
-        flex-direction: row;
-        text-align: left;
-        align-items: center;
+    .investor {
+        font-size: 14px;
     }
 
     .contact {

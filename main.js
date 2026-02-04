@@ -62,7 +62,7 @@ const observer = new IntersectionObserver((entries) => {
 }, observerOptions);
 
 // Observe grid containers
-document.querySelectorAll('.team-grid, .advisors-grid').forEach(grid => {
+document.querySelectorAll('.team-grid').forEach(grid => {
     observer.observe(grid);
 });
 
