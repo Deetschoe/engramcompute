@@ -1,11 +1,25 @@
+// Dynamic year
+document.getElementById('year').textContent = new Date().getFullYear();
+
 // Navbar scroll effect
 const navbar = document.querySelector('.navbar');
+const scrollGlow = document.querySelector('.scroll-glow');
 
 window.addEventListener('scroll', () => {
-    if (window.pageYOffset > 50) {
+    const scrollY = window.pageYOffset;
+
+    // Navbar background
+    if (scrollY > 50) {
         navbar.classList.add('scrolled');
     } else {
         navbar.classList.remove('scrolled');
+    }
+
+    // Orange glow effect on scroll
+    if (scrollY > 100) {
+        scrollGlow.classList.add('active');
+    } else {
+        scrollGlow.classList.remove('active');
     }
 });
 
@@ -36,7 +50,7 @@ const observerOptions = {
 const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
         if (entry.isIntersecting) {
-            const cards = entry.target.querySelectorAll('.team-card, .advisor-card, .contact-card');
+            const cards = entry.target.querySelectorAll('.team-card, .advisor-card');
             cards.forEach((card, i) => {
                 setTimeout(() => {
                     card.classList.add('visible');
@@ -48,7 +62,7 @@ const observer = new IntersectionObserver((entries) => {
 }, observerOptions);
 
 // Observe grid containers
-document.querySelectorAll('.team-grid, .advisors-grid, .contact-cards').forEach(grid => {
+document.querySelectorAll('.team-grid, .advisors-grid').forEach(grid => {
     observer.observe(grid);
 });
 

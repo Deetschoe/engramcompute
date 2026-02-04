@@ -12,6 +12,9 @@
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='40' fill='%23c2410c'/></svg>">
 </head>
 <body>
+    <!-- Scroll glow effect -->
+    <div class="scroll-glow"></div>
+
     <nav class="navbar">
         <div class="nav-container">
             <a href="#" class="logo">
@@ -74,22 +77,20 @@
                 <div class="team-grid">
                     <div class="team-card">
                         <div class="team-image">
-                            <div class="avatar">MY</div>
+                            <img src="maxx.png" alt="Maxx Yung" class="avatar-img">
                         </div>
                         <div class="team-info">
                             <h3>Maxx Yung</h3>
                             <span class="team-title">CEO</span>
-                            <p>Leading Engram's vision and strategy for next-generation biological systems.</p>
                         </div>
                     </div>
                     <div class="team-card">
                         <div class="team-image">
-                            <div class="avatar">DS</div>
+                            <img src="dieter.png" alt="Dieter Schoening" class="avatar-img">
                         </div>
                         <div class="team-info">
                             <h3>Dieter Schoening</h3>
                             <span class="team-title">Head of Operations</span>
-                            <p>Overseeing lab operations, infrastructure, and technical execution.</p>
                         </div>
                     </div>
                 </div>
@@ -98,7 +99,7 @@
 
         <section class="advisors">
             <div class="section-container">
-                <div class="section-label">Board Advisors</div>
+                <div class="section-label">Board</div>
                 <div class="advisors-grid">
                     <div class="advisor-card">
                         <div class="advisor-image">
@@ -107,7 +108,6 @@
                         <div class="advisor-info">
                             <h3>Dr. James Chen</h3>
                             <span class="advisor-title">Scientific Advisor</span>
-                            <p>Former Stanford neuroscience faculty. Neural development & organoid systems.</p>
                         </div>
                     </div>
                     <div class="advisor-card">
@@ -117,7 +117,6 @@
                         <div class="advisor-info">
                             <h3>Sarah Rodriguez</h3>
                             <span class="advisor-title">Industry Advisor</span>
-                            <p>20+ years biotech commercialization. Former VP at leading pharma.</p>
                         </div>
                     </div>
                     <div class="advisor-card">
@@ -127,7 +126,6 @@
                         <div class="advisor-info">
                             <h3>Dr. Michael Kim</h3>
                             <span class="advisor-title">Technical Advisor</span>
-                            <p>Pioneer in stem cell engineering. Patents in cellular reprogramming.</p>
                         </div>
                     </div>
                 </div>
@@ -137,12 +135,7 @@
         <section id="contact" class="contact">
             <div class="section-container">
                 <h2>Get in touch</h2>
-                <p>Interested in what we're building?</p>
-                <div class="contact-links">
-                    <a href="mailto:maxx@engramcompute.com">maxx@engramcompute.com</a>
-                    <span class="divider">·</span>
-                    <a href="mailto:dieter@engramcompute.com">dieter@engramcompute.com</a>
-                </div>
+                <a href="mailto:maxx@engramcompute.com" class="contact-email">maxx@engramcompute.com</a>
             </div>
         </section>
     </main>
@@ -152,7 +145,7 @@
             <div class="footer-logo">
                 <span class="logo-text-sm">Engram</span>
             </div>
-            <p class="copyright">© 2025 Engram. All rights reserved.</p>
+            <p class="copyright">© <span id="year"></span> Engram. All rights reserved.</p>
         </div>
     </footer>
 
