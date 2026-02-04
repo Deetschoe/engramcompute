@@ -7,16 +7,20 @@
     <meta name="description" content="Building the future of biological compute.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>◉</text></svg>">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧠</text></svg>">
 </head>
 <body>
+    <!-- Neural network background -->
+    <canvas id="neural-bg"></canvas>
+
     <nav class="navbar">
         <div class="nav-container">
             <a href="#" class="logo">
-                <span class="logo-icon">◉</span>
-                <span class="logo-text">engram</span>
+                <span class="logo-text">
+                    <span class="letter" style="--color: #ff6b6b">E</span><span class="letter" style="--color: #ffa94d">n</span><span class="letter" style="--color: #ffd43b">g</span><span class="letter" style="--color: #69db7c">r</span><span class="letter" style="--color: #4dabf7">a</span><span class="letter" style="--color: #9775fa">m</span>
+                </span>
             </a>
             <div class="nav-links">
                 <a href="#about">About</a>
@@ -39,34 +43,50 @@
     <main>
         <section class="hero">
             <div class="hero-content">
-                <h1>Building the future of<br><span class="highlight">biological compute</span></h1>
+                <div class="hero-badge">Now building</div>
+                <h1>
+                    <span class="line">Building the future of</span>
+                    <span class="line gradient-text">biological compute</span>
+                </h1>
                 <p class="hero-subtitle">Pioneering next-generation cellular systems.</p>
                 <div class="hero-cta">
-                    <a href="#contact" class="btn-primary">Get in touch</a>
+                    <a href="#contact" class="btn-primary">
+                        <span>Get in touch</span>
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                            <path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
                 </div>
-            </div>
-            <div class="hero-visual">
-                <div class="grid-pattern"></div>
             </div>
         </section>
 
         <section id="about" class="about">
             <div class="section-container">
+                <div class="section-label">
+                    <span class="dot"></span>
+                    What we do
+                </div>
                 <div class="about-content">
-                    <h2>What we do</h2>
-                    <p>We're developing foundational technologies at the intersection of stem cell biology and computation. Our work focuses on creating new platforms for understanding and engineering cellular systems.</p>
-                    <p class="muted">More details coming soon.</p>
+                    <p class="about-text">We're developing foundational technologies at the intersection of <span class="highlight-word">stem cell biology</span> and <span class="highlight-word">computation</span>.</p>
+                    <p class="about-secondary">Our work focuses on creating new platforms for understanding and engineering cellular systems.</p>
+                    <div class="about-note">
+                        <span class="note-icon">◉</span>
+                        More details coming soon.
+                    </div>
                 </div>
             </div>
         </section>
 
         <section id="team" class="team">
             <div class="section-container">
-                <h2>Team</h2>
+                <div class="section-label">
+                    <span class="dot"></span>
+                    Team
+                </div>
                 <div class="team-grid">
                     <div class="team-card">
                         <div class="team-image">
-                            <div class="placeholder-image">MY</div>
+                            <div class="avatar" style="--gradient: linear-gradient(135deg, #ff6b6b, #ffa94d)">MY</div>
                         </div>
                         <div class="team-info">
                             <h3>Maxx Yung</h3>
@@ -76,7 +96,7 @@
                     </div>
                     <div class="team-card">
                         <div class="team-image">
-                            <div class="placeholder-image">DS</div>
+                            <div class="avatar" style="--gradient: linear-gradient(135deg, #4dabf7, #9775fa)">DS</div>
                         </div>
                         <div class="team-info">
                             <h3>Dieter Schoening</h3>
@@ -90,36 +110,39 @@
 
         <section class="advisors">
             <div class="section-container">
-                <h2>Board Advisors</h2>
+                <div class="section-label">
+                    <span class="dot"></span>
+                    Board Advisors
+                </div>
                 <div class="advisors-grid">
                     <div class="advisor-card">
                         <div class="advisor-image">
-                            <div class="placeholder-image">JC</div>
+                            <div class="avatar avatar-sm" style="--gradient: linear-gradient(135deg, #69db7c, #4dabf7)">JC</div>
                         </div>
                         <div class="advisor-info">
                             <h3>Dr. James Chen</h3>
                             <span class="advisor-title">Scientific Advisor</span>
-                            <p>Former Stanford neuroscience faculty with expertise in neural development and organoid systems.</p>
+                            <p>Former Stanford neuroscience faculty. Neural development & organoid systems.</p>
                         </div>
                     </div>
                     <div class="advisor-card">
                         <div class="advisor-image">
-                            <div class="placeholder-image">SR</div>
+                            <div class="avatar avatar-sm" style="--gradient: linear-gradient(135deg, #ffd43b, #ff6b6b)">SR</div>
                         </div>
                         <div class="advisor-info">
                             <h3>Sarah Rodriguez</h3>
                             <span class="advisor-title">Industry Advisor</span>
-                            <p>20+ years in biotech commercialization, former VP at leading pharmaceutical companies.</p>
+                            <p>20+ years biotech commercialization. Former VP at leading pharma.</p>
                         </div>
                     </div>
                     <div class="advisor-card">
                         <div class="advisor-image">
-                            <div class="placeholder-image">MK</div>
+                            <div class="avatar avatar-sm" style="--gradient: linear-gradient(135deg, #9775fa, #ff6b6b)">MK</div>
                         </div>
                         <div class="advisor-info">
                             <h3>Dr. Michael Kim</h3>
                             <span class="advisor-title">Technical Advisor</span>
-                            <p>Pioneer in stem cell engineering with multiple patents in cellular reprogramming technologies.</p>
+                            <p>Pioneer in stem cell engineering. Patents in cellular reprogramming.</p>
                         </div>
                     </div>
                 </div>
@@ -128,16 +151,34 @@
 
         <section id="contact" class="contact">
             <div class="section-container">
-                <h2>Get in touch</h2>
-                <p>Interested in learning more? Reach out to our team.</p>
-                <div class="contact-emails">
-                    <a href="mailto:maxx@engramcompute.com" class="email-link">
-                        <span class="email-name">Maxx Yung</span>
-                        <span class="email-address">maxx@engramcompute.com</span>
+                <div class="contact-header">
+                    <h2>Let's talk</h2>
+                    <p>Interested in what we're building? Drop us a line.</p>
+                </div>
+                <div class="contact-cards">
+                    <a href="mailto:maxx@engramcompute.com" class="contact-card">
+                        <div class="contact-icon" style="--gradient: linear-gradient(135deg, #ff6b6b, #ffa94d)">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <path d="M3 8L10.89 13.26C11.2187 13.4793 11.6049 13.5963 12 13.5963C12.3951 13.5963 12.7813 13.4793 13.11 13.26L21 8M5 19H19C19.5304 19 20.0391 18.7893 20.4142 18.4142C20.7893 18.0391 21 17.5304 21 17V7C21 6.46957 20.7893 5.96086 20.4142 5.58579C20.0391 5.21071 19.5304 5 19 5H5C4.46957 5 3.96086 5.21071 3.58579 5.58579C3.21071 5.96086 3 6.46957 3 7V17C3 17.5304 3.21071 18.0391 3.58579 18.4142C3.96086 18.7893 4.46957 19 5 19Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <div class="contact-info">
+                            <span class="contact-name">Maxx Yung</span>
+                            <span class="contact-email">maxx@engramcompute.com</span>
+                        </div>
+                        <div class="contact-arrow">→</div>
                     </a>
-                    <a href="mailto:dieter@engramcompute.com" class="email-link">
-                        <span class="email-name">Dieter Schoening</span>
-                        <span class="email-address">dieter@engramcompute.com</span>
+                    <a href="mailto:dieter@engramcompute.com" class="contact-card">
+                        <div class="contact-icon" style="--gradient: linear-gradient(135deg, #4dabf7, #9775fa)">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <path d="M3 8L10.89 13.26C11.2187 13.4793 11.6049 13.5963 12 13.5963C12.3951 13.5963 12.7813 13.4793 13.11 13.26L21 8M5 19H19C19.5304 19 20.0391 18.7893 20.4142 18.4142C20.7893 18.0391 21 17.5304 21 17V7C21 6.46957 20.7893 5.96086 20.4142 5.58579C20.0391 5.21071 19.5304 5 19 5H5C4.46957 5 3.96086 5.21071 3.58579 5.58579C3.21071 5.96086 3 6.46957 3 7V17C3 17.5304 3.21071 18.0391 3.58579 18.4142C3.96086 18.7893 4.46957 19 5 19Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <div class="contact-info">
+                            <span class="contact-name">Dieter Schoening</span>
+                            <span class="contact-email">dieter@engramcompute.com</span>
+                        </div>
+                        <div class="contact-arrow">→</div>
                     </a>
                 </div>
             </div>
@@ -147,8 +188,9 @@
     <footer>
         <div class="footer-container">
             <div class="footer-logo">
-                <span class="logo-icon">◉</span>
-                <span class="logo-text">engram</span>
+                <span class="logo-text-sm">
+                    <span style="color: #ff6b6b">E</span><span style="color: #ffa94d">n</span><span style="color: #ffd43b">g</span><span style="color: #69db7c">r</span><span style="color: #4dabf7">a</span><span style="color: #9775fa">m</span>
+                </span>
             </div>
             <p class="copyright">© 2025 Engram. All rights reserved.</p>
         </div>
