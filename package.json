@@ -1,0 +1,10 @@
+{
+  "name": "engramcompute",
+  "version": "1.0.0",
+  "description": "Engram - Building the future of biological compute",
+  "private": true,
+  "scripts": {
+    "dev": "npx serve .",
+    "start": "npx serve ."
+  }
+}
