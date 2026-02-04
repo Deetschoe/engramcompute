@@ -398,22 +398,43 @@ body::after {
 }
 
 .investors-grid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 12px 24px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px 32px;
 }
 
 .investor {
-    font-size: 15px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.investor-img {
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+.investor-img-round {
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.investor-name {
+    font-size: 14px;
     font-weight: 500;
     color: var(--color-text);
+}
+
+.investor-text {
     display: flex;
     flex-direction: column;
-    gap: 2px;
+    gap: 1px;
 }
 
 .investor-note {
-    font-size: 11px;
+    font-size: 10px;
     font-family: var(--font-mono);
     color: var(--color-text-muted);
     font-weight: 400;
@@ -493,7 +514,8 @@ footer {
     }
 
     .investors-grid {
-        gap: 8px 20px;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
     }
 }
 
@@ -566,8 +588,18 @@ footer {
         align-items: center;
     }
 
-    .investor {
-        font-size: 14px;
+    .investors-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 16px;
+    }
+
+    .investor-img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .investor-name {
+        font-size: 13px;
     }
 
     .contact {
